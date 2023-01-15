@@ -1,15 +1,10 @@
-body {
-    margin :0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
+@import "./utils/variable";
+@import "./partials/base";
+@import "./utils/layout";
+@import "./partials/header.scss";
+@import "./partials/fonctionnement.scss";
+@import "./partials/restaurant.scss";
+@import "./partials/footer.scss";
+@import "./partials/page.scss";
 
-}
 
-.header {
-   text-align: center; 
-   box-shadow: 0 0 0.5rem;
-}
-.search{
-
-}

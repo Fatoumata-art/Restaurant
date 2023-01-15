@@ -1,11 +1,28 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", "Shrikhand", sans-serif;
   height: 100vh;
 }
 
 .header {
   text-align: center;
   box-shadow: 0 0 0.5rem;
-}/*# sourceMappingURL=style.css.map */
+  position: relative;
+  padding: 0.3rem;
+}
+
+.search {
+  background-color: rgb(234, 234, 234);
+  padding: 10px 0px 10px 50px;
+  text-align: center;
+  border-top: outset 2px rgba(209, 204, 204, 0.884);
+}
+.search input {
+  background-color: rgb(234, 234, 234);
+  border: none;
+  padding: 5px 0px 5px 5px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+

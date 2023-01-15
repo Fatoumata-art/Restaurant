@@ -1,0 +1,43 @@
+.function-container{
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: $desk-breackpoint){
+        @include flex(flex, space-between);
+         
+      }
+    .function-choise{
+        background-color: $color-background;
+        border-radius: 15px;
+        box-shadow: 0px 3px 8px 2px #e2dcdc;
+        padding: 5px 0px 5px 30px;
+        margin: 0px 15px 25px 10px;
+        @media (min-width: $desk-breackpoint){
+            width: 28%;
+             
+          }
+    }
+    .function-icon{
+        padding-left: 5px;
+        padding-right: 15px;
+        color: $color-background;
+    }
+    .function-number{
+        color: white;
+        background-color: $color-primary;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        @include flex(flex, center);
+        flex-direction: row;
+        align-items: center;
+       
+        
+    }
+    .fa heart{
+        margin-top: 15px;
+    }
+}

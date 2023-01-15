@@ -1,0 +1,43 @@
+.footer{
+    background-color: $color-footer-background;
+    color: white; 
+    padding: 2px 0px 7px 15px;
+    .footer-title{
+        font-family: $font-secondary;
+        font-weight: normal;
+        @media (min-width: $tab-breackpoint){
+            text-align: center;
+        }
+    }
+    .footer-menu{
+        // flex-direction: column;
+        // justify-content: space-between;
+        @include flex(column, space-between);
+        padding-right: 20px;
+        padding-left: 20px;
+        @media (min-width: $tab-breackpoint){
+            flex-direction: row;
+        }
+        li{
+            list-style: none;
+            padding-bottom: 7px;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+        .footer-icon{
+            margin-right: 10px;
+            i{
+                font-size: 10px;
+                // &.fa-utensils {
+                //     color: red;
+                // }
+            }
+        }
+        
+        
+    }
+  
+
+}
