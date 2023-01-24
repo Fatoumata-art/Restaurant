@@ -10,8 +10,8 @@ body {
 
 }
 
-.contenaire{
-    padding: 2rem;
+.container{
+   margin: 0 auto;
 }
 
 a{
@@ -19,6 +19,7 @@ a{
     color: black;
 }
 
-section{
+.functionnement, .restaurant{
+    padding:0 2rem;
     padding-bottom: 1.5rem;
 }
