@@ -1,3 +1,9 @@
+.functionnement h2{
+            padding-top: 20px;
+            padding-bottom: 10px;
+ }
+
+
 .function-container{
     counter-reset: number;
     
@@ -22,7 +28,8 @@
             left: -1rem;
             top: 50%;
             transform: translateY(-50%);
-            @include flex(flex, center);
+            @include flex(center, center);
+            
             
         }
         background-color: $color-background;
@@ -34,6 +41,7 @@
 
         &:hover{
             @include zoomEffet();
+            cursor: pointer;
         }
         @media (min-width: $desk-breackpoint){
             width: 28%;
@@ -41,7 +49,8 @@
           }
           .text .fas{
             padding-right: 15px;
-            // color: $color-background;
+            color: grey;
+            transition: all 400ms ease-in-out;
         }
     }
     

@@ -10,9 +10,9 @@
         }
     }
     .footer-menu{
-        // flex-direction: column;
-        // justify-content: space-between;
-        @include flex(column, space-between);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding-right: 20px;
         padding-left: 20px;
         @media (min-width: $tab-breackpoint){

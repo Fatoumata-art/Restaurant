@@ -24,11 +24,41 @@
     border-radius: 45px 45px 0 0;
     margin-top: -60px;
     padding:0 2rem;
+
+    .page-name{
+    position: relative;
+    &:hover{
+        .fas{opacity: 1;
+            transform: translateY(-50%) scale(1.2);
+        }
+        .far{display: none;}
+        
+    }
+
+    i{
+        position: absolute;
+        font-size: 2rem;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    i.fas{
+        color: transparent;
+        background-image: linear-gradient($color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        
+    }
 }
+}
+
+
 .restaurant-page-container{
     flex-wrap: wrap;
     @media (min-width: $desk-breackpoint){
-        @include flex(flex, space-between);
+        @include flex(center, space-between);
         padding: 2rem;
     }
     h3{
@@ -48,6 +78,13 @@
         top: 25px;
        }
     }
+    section{
+        @media (min-width: $desk-breackpoint){
+        width: 30%;
+        }
+        
+        
+    }
    
 }
 
@@ -65,12 +102,15 @@
     overflow: hidden;
     cursor: pointer;
     @include shadow();
+    animation-direction: normal;
 
     &:hover .menu_icon{
                 opacity: 1;
                width: 80px;
+               
                 i{
-                    animation: slide-check 500ms 150ms ease-out;   
+                    animation: slide-check 500ms 150ms ease-out;
+                       
                 }
     }
     .menu_text{
@@ -116,6 +156,7 @@
         @include flex(center, center);
         
        }
+       
        
        
     }

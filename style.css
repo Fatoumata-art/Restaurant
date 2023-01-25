@@ -39,6 +39,57 @@ a {
   padding-bottom: 1.5rem;
 }
 
+.auto_loader {
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 1;
+  animation: visible 100ms;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  display: grid;
+  place-items: center;
+}
+.auto_loader .spinner {
+  content: "";
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#9356DC, #FF79DA, #99E2D0);
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 3px 8px 2px #e2dcdc;
+  opacity: 1;
+  animation: spin 1.3s linear infinite;
+  border: 2px solid white;
+}
+.auto_loader .spinner::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 0px 3px 11px -7px;
+  border: 2px solid white;
+}
+
+@keyframes visible {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -70,8 +121,8 @@ a {
 .explorer button {
   color: white;
   background-image: linear-gradient(#FF79DA, #9356DC);
-  font-size: 1rem;
-  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
   border-radius: 2rem;
   border: transparent;
   box-shadow: inset 0 0 1em #FF79DA;
@@ -80,7 +131,14 @@ a {
   transition-duration: 1s;
 }
 .explorer button:hover {
-  transform: scale(1.15);
+  box-shadow: 0 0 1em #FF79DA;
+  background: linear-gradient(#ff93e1, #ae80e5);
+  cursor: pointer;
+}
+
+.functionnement h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .function-container {
@@ -117,11 +175,12 @@ a {
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  align-items: flex;
+  align-items: center;
   justify-content: center;
 }
 .function-container .function-choise:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 @media (min-width: 1224px) {
   .function-container .function-choise {
@@ -130,6 +189,8 @@ a {
 }
 .function-container .function-choise .text .fas {
   padding-right: 15px;
+  color: grey;
+  transition: all 400ms ease-in-out;
 }
 .function-container .fa heart {
   margin-top: 15px;
@@ -137,6 +198,8 @@ a {
 
 .restaurant {
   background-color: rgb(246, 246, 246);
+  width: 100%;
+  box-sizing: border-box;
 }
 .restaurant .restaurant-cards-container {
   display: grid;
@@ -154,8 +217,12 @@ a {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.restaurant h2 {
+  padding-top: 20px;
+}
 
 .restaurant-card {
+  margin: 10px;
   padding: 0;
   border-radius: 15px;
   overflow: hidden;
@@ -163,10 +230,16 @@ a {
   box-shadow: 0px 3px 8px 2px #e2dcdc;
 }
 .restaurant-card .card-text {
+  position: relative;
   padding: 0px 10px 0px 10px;
-  display: flex;
-  align-items: flex;
-  justify-content: space-between;
+  margin-top: -15px;
+}
+.restaurant-card .card-text:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+.restaurant-card .card-text:hover .far {
+  display: none;
 }
 .restaurant-card .card-text .title {
   margin-bottom: 0;
@@ -174,12 +247,20 @@ a {
 .restaurant-card .card-text p {
   margin-top: 5px;
 }
-.restaurant-card .card-text i.far {
-  font-size: 160%;
-  margin-top: 25px;
+.restaurant-card .card-text i {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.restaurant-card .card-text i.far :hover {
+.restaurant-card .card-text i.fas {
+  color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
 }
 .restaurant-card .card-img {
   position: relative;
@@ -216,7 +297,7 @@ a {
 }
 .footer .footer-menu {
   display: flex;
-  align-items: column;
+  flex-direction: column;
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
@@ -267,6 +348,31 @@ a {
   margin-top: -60px;
   padding: 0 2rem;
 }
+.restaurant-page .page-name {
+  position: relative;
+}
+.restaurant-page .page-name:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+.restaurant-page .page-name:hover .far {
+  display: none;
+}
+.restaurant-page .page-name i {
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.restaurant-page .page-name i.fas {
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
 
 .restaurant-page-container {
   flex-wrap: wrap;
@@ -274,7 +380,7 @@ a {
 @media (min-width: 1224px) {
   .restaurant-page-container {
     display: flex;
-    align-items: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 2rem;
   }
@@ -294,6 +400,11 @@ a {
   left: 1px;
   top: 25px;
 }
+@media (min-width: 1224px) {
+  .restaurant-page-container section {
+    width: 30%;
+  }
+}
 
 .entrees, .plats, .desserts {
   animation: fadeIn 3s;
@@ -310,6 +421,7 @@ a {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0px 3px 8px 2px #e2dcdc;
+  animation-direction: normal;
 }
 .menu_item:hover .menu_icon {
   opacity: 1;
