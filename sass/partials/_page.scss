@@ -73,7 +73,6 @@
         width: 50px;
         background-color: $color-tertiary;
         position: absolute;
-        position: absolute;
         left: 1px;
         top: 25px;
        }
@@ -103,7 +102,7 @@
     cursor: pointer;
     @include shadow();
     animation-direction: normal;
-
+    
     &:hover .menu_icon{
                 opacity: 1;
                width: 80px;
@@ -147,6 +146,7 @@
        flex-shrink: 0;
        @include flex(center, center);
        color: white;
+       transition: all 1s;
        .fas{
         width: 40px;
         height: 40px;

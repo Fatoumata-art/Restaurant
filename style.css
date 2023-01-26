@@ -69,8 +69,8 @@ a {
 .auto_loader .spinner::before {
   content: "";
   position: absolute;
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   background-color: white;
   box-shadow: inset 0px 3px 11px -7px;
@@ -396,7 +396,6 @@ a {
   width: 50px;
   background-color: #99E2D0;
   position: absolute;
-  position: absolute;
   left: 1px;
   top: 25px;
 }
@@ -465,6 +464,7 @@ a {
   align-items: center;
   justify-content: center;
   color: white;
+  transition: all 1s;
 }
 .menu_item .menu_icon .fas {
   width: 40px;
