@@ -12,7 +12,7 @@
         @include flex(flex, space-between);
          
       }
-      padding-bottom: 5rem;
+      padding-bottom: 2rem;
 
     .function-choise{
         position: relative;
@@ -42,6 +42,10 @@
         &:hover{
             @include zoomEffet();
             cursor: pointer;
+            .text .fas{
+                color: $color-primary;
+            }
+           
         }
         @media (min-width: $desk-breackpoint){
             width: 28%;
