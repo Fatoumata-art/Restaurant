@@ -41,18 +41,16 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        overflow: hidden;
         transform: scale(1);
         transition-property: transform;
-        transition-duration: 2000ms ease-out;
+        transition: all 800ms ease-out;
+        &:hover{
+            opacity: 1;
+                transform: translateY(-50%) scale(1.15);
             
-            &:hover{
-                opacity: 1;
-                    transform: translateY(-50%) scale(1.15);
-                
-                .far{opacity: 0;}
-                
-            }
+            .far{opacity: 0;}
+            
+        }
     }
 }
 }
