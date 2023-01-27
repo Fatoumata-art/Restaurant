@@ -9,7 +9,9 @@
     
     justify-content: center;
     @media (min-width: $desk-breackpoint){
-        @include flex(flex, space-between);
+        //@include flex(flex, space-between);
+        display: flex;
+        justify-content: space-between;
          
       }
       padding-bottom: 2rem;
@@ -28,10 +30,9 @@
             left: -1rem;
             top: 50%;
             transform: translateY(-50%);
-            @include flex(center, center);
-            
-            
+            @include flex(center, center);     
         }
+
         background-color: $color-background;
         border-radius: 15px;
         padding: 5px 0px 5px 30px;
@@ -42,6 +43,8 @@
         &:hover{
             @include zoomEffet();
             cursor: pointer;
+            background-color: 0px 3px 8px 2px #ffdff6;
+            box-shadow:  0px 3px 8px 2px #ffdff6;;
             .text .fas{
                 color: $color-primary;
             }

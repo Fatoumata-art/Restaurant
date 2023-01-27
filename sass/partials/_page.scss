@@ -10,11 +10,11 @@
 }
 .menu-img img{
     width: 100%;
-    height: 60vw;
+    height: 50vw;
     object-fit: cover;
     object-position: center;
     @media (min-width: $desk-breackpoint){
-        height: 40vw;
+        height: 35vw;
     }
 }
 
@@ -163,7 +163,9 @@
 }
 
 .page-name{
-    @include flex(flex, space-between);
+   // @include flex(flex, space-between);
+   display: flex;
+   justify-content: space-between;
     font-family: $font-secondary;
     padding: 2rem;
     @media (min-width: $desk-breackpoint){
