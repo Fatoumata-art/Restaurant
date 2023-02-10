@@ -32,8 +32,7 @@ Page d’accueil
     
   
   # Technologie
-  HTML / CSS / Sass 
-  git
+  HTML / CSS / Sass / git
   
   # Compétences évaluées
     Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
